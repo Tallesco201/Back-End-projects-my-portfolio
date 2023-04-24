@@ -4,6 +4,14 @@ const typeorm_1 = require("typeorm");
 require("dotenv/config");
 const projects_entity_1 = require("./entities/projects.entity");
 const _1682110508552_updateTableProject_1 = require("./migrations/1682110508552-updateTableProject");
+const nodeEnv = process.env.NODE_ENV;
+const obj = {
+    type: "postgres",
+    url: process.env.DATABASE_URL,
+    entities: [projects_entity_1.Project],
+    migrations: [_1682110508552_updateTableProject_1.UpdateTableProject1682110508552],
+};
+nodeEnv === "production" ? { obj } : {};
 const AppDataSource = new typeorm_1.DataSource({
     type: "postgres",
     host: process.env.PGHOST,

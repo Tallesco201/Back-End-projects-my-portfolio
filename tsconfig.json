@@ -11,13 +11,7 @@
       "forceConsistentCasingInFileNames": true,
       "skipLibCheck": true,
       "typeRoots": ["src/@types","node_modules/@types"],
-      "resolveJsonModule": true,
-      "strictPropertyInitialization": false,
-    
-
-
-    },
-    "include": ["src"],
-    "exclude": ["node_modules"]
+      "resolveJsonModule": true
+    }
   }
   

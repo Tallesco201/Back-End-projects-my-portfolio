@@ -20,11 +20,12 @@ const migrationsPath = path_1.default.join(__dirname, "./migrations/**.{js,ts}")
 } */
 const AppDataSource = new typeorm_1.DataSource({
     type: "postgres",
-    host: process.env.PGHOST,
-    port: parseInt(process.env.PGPORT),
+    url: process.env.DATABASE_URL,
+    /* host:process.env.PGHOST,
+    port: parseInt(process.env.PGPORT!),
     username: process.env.PGUSER,
     password: process.env.PGPASSWORD,
-    database: process.env.PGDATABASE,
+    database: process.env.PGDATABASE, */
     logging: true,
     synchronize: false,
     entities: [entitiesPath],

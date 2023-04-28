@@ -19,8 +19,8 @@ const data_source_1 = __importDefault(require("./data-source"));
         .catch((err) => {
         console.error("Error during Data Source initialization", err);
     });
-    app_1.default.listen(3001, () => {
-        console.log("Servidor executando em http://localhost:3001");
+    app_1.default.listen(3000, () => {
+        console.log("Servidor executando em http://localhost:3000");
     });
 }))();
 //# sourceMappingURL=server.js.map
